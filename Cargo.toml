@@ -1,0 +1,10 @@
+[package]
+name = "librypt-kdf-hkdf"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+librypt-kdf = { version = "0.1", git = "https://www.github.com/librypt/librypt-kdf" }
+librypt-mac = { version = "0.1", git = "https://www.github.com/librypt/librypt-mac" }
+librypt-hash = { version = "0.1", git = "https://www.github.com/librypt/librypt-hash" }
+librypt-mac-hmac = { version = "0.1", git = "https://www.github.com/librypt/librypt-mac-hmac" }
