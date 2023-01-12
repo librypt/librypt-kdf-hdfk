@@ -14,6 +14,12 @@ impl<const BLOCK_SIZE: usize, const HASH_SIZE: usize, H: HashFn<BLOCK_SIZE, HASH
     for Hkdf<BLOCK_SIZE, HASH_SIZE, H>
 {
     fn kdf(ikm: &[u8], salt: &[u8], info: &[u8], okm: &mut [u8]) {
+        let salt = if salt.len() > 0 {
+            salt
+        } else {
+            &[0u8; HASH_SIZE]
+        };
+
         let prk = Hmac::<BLOCK_SIZE, HASH_SIZE, H>::mac(ikm, salt);
         let mut mac = Hmac::<BLOCK_SIZE, HASH_SIZE, H>::new(&prk);
 
