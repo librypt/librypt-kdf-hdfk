@@ -8,3 +8,7 @@ librypt-kdf = { version = "0.1", git = "https://www.github.com/librypt/librypt-k
 librypt-mac = { version = "0.1", git = "https://www.github.com/librypt/librypt-mac" }
 librypt-hash = { version = "0.1", git = "https://www.github.com/librypt/librypt-hash" }
 librypt-mac-hmac = { version = "0.1", git = "https://www.github.com/librypt/librypt-mac-hmac" }
+
+[dev-dependencies]
+hex = "0.4"
+librypt-hash-md5 = { version = "0.1", git = "https://www.github.com/librypt/librypt-hash-md5" }
